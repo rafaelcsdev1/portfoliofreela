@@ -212,6 +212,40 @@
         box-shadow: 0 8px 24px -20px rgba(15, 23, 42, 0.18);
       }
 
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .header-nav {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      @media (max-width: 900px) {
+        .header-inner {
+          flex-direction: column;
+          align-items: stretch;
+          text-align: center;
+        }
+
+        .header-nav {
+          justify-content: center;
+          gap: 16px;
+          width: 100%;
+        }
+
+        .header-nav a {
+          flex: 1 1 auto;
+          min-width: 0;
+        }
+      }
+
       .hv-primary,
       .hv-wa,
       .hv-lift {
@@ -392,6 +426,7 @@
         "
       >
         <div
+          class="header-inner"
           style="
             max-width: 1180px;
             margin: 0 auto;
@@ -419,8 +454,8 @@
               src="ChatGPT Image 1 de ago. de 2026, 19_13_54.png"
               alt="Logo R"
               style="
-                width: 42px;
-                height: 42px;
+                width: 80px;
+                height: 80px;
                 border-radius: 50%;
                 border: 2px solid #1f2937;
                 object-fit: cover;
@@ -429,7 +464,10 @@
             />
             Rafael Cardoso dos Santos
           </a>
-          <nav style="display: flex; align-items: center; gap: 26px">
+          <nav
+            class="header-nav"
+            style="display: flex; align-items: center; gap: 26px"
+          >
             <a
               href="#servicos"
               style="font-weight: 600; font-size: 15px; color: #43524d"
